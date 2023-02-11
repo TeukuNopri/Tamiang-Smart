@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsAmbulanceActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <ImageButton
+        android:id="@+id/btn_back_arrow"
+        android:background="@drawable/bg_arrow_maps"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_back"/>
+
+    <RelativeLayout
+        android:layout_margin="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_maps">
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ambulance 24 Jam"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluhan"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="#000"/>
+
+            <EditText
+                android:id="@+id/et_ambulance_keluhan"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="top"/>
+
+            <LinearLayout
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_marginLeft="7dp"
+                    android:id="@+id/btn_ambulance_kirim_lokasi"
+                    android:text="Kirim Lokasi"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:background="@drawable/bg_progress_bar"
+        android:padding="5dp"
+        android:indeterminateTint="@color/white"
+        android:indeterminate="true"
+        android:id="@+id/pb_ambulance_send"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

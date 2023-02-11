@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DaftarPoliFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/bg_up_home">
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title_daftar_poli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Daftar Berobat Poliklinik"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/tv_title_daftar_poli"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Rencana Berobat"
+                android:textStyle="bold"
+                android:textColor="#424242"/>
+
+            <EditText
+                android:id="@+id/et_pilih_tgl"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@drawable/bg_edittext"
+                android:drawableRight="@drawable/ic_date"
+                android:enabled="true"
+                android:focusable="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="#424242"
+                android:textSize="13sp"
+                android:text="asdf"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Bayar"
+                android:textStyle="bold"
+                android:textColor="#424242"/>
+
+            <RadioGroup
+                android:id="@+id/rg_jenis_bayar"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/rb_umum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Umum"/>
+
+                <RadioButton
+                    android:id="@+id/rb_bpjs"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BPJS"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ly_rujukan"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asal Rujukan"
+                    android:textStyle="bold"
+                    android:textColor="#424242"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_edittext"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/sp_rujukan"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        tools:listitem="@layout/custom_spinner_poliklinik"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Poliklinik"
+                android:textStyle="bold"
+                android:textColor="#424242"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_edittext"
+                android:layout_marginBottom="5dp">
+
+                <Spinner
+                    android:id="@+id/sp_poliklinik"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    tools:listitem="@layout/custom_spinner_poliklinik"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Dokter"
+                android:textStyle="bold"
+                android:textColor="#424242"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_edittext"
+                android:layout_marginBottom="5dp">
+
+                <Spinner
+                    android:id="@+id/sp_dokter"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    tools:listitem="@layout/custom_spinner_poliklinik"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jika anda memilih cara bayar BPJS pastikan anda sudah mengambil rujukan dari faskes asal, sistem secara otomatis akan mendeteksi data rujukan anda"
+                android:textSize="10sp"
+                android:textColor="#D4251C"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Faskes I adalah Puskesmas / Klinik"
+                android:textSize="10sp"
+                android:textColor="#D4251C"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Faskes II adalah Rumah Sakit"
+                android:textSize="10sp"
+                android:textColor="#D4251C"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_lanjut_poliklinik"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_button_daftar_poliklinik"
+                android:text="Lanjut"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pb_daftar_poli"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_progress_bar"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:padding="5dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

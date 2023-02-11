@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "187385192511",
+    "project_id": "e-pasien-263c4",
+    "storage_bucket": "e-pasien-263c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187385192511:android:8427be01e8d173aa10d88a",
+        "android_client_info": {
+          "package_name": "com.milaparsia.rsia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187385192511-p6q9tfrjglfacdv9ttjiq1k0nh2dkrua.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.milaparsia.rsia",
+            "certificate_hash": "f07bf343a2dcd62da925b95a1eebbcb314e13cfd"
+          }
+        },
+        {
+          "client_id": "187385192511-i32ue501vqskggcrv2m0ioia165t4oqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfyKcMm_iXTYr7ul02NvsRdLIIvVGCtJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187385192511-i32ue501vqskggcrv2m0ioia165t4oqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

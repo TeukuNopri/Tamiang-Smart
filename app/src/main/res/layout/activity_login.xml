@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="-470dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login_up"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/bg_login_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Login"
+                android:gravity="center"
+                android:textColor="#424242"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rekam Medik"
+                android:textStyle="bold"
+                android:textColor="#424242"/>
+
+            <EditText
+                android:id="@+id/et_login_medik"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:inputType="number"
+                android:paddingLeft="4dp"
+                android:textColor="#424242"
+                android:background="@drawable/bg_edittext"/>
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nik"
+                android:textStyle="bold"
+                android:textColor="#424242"/>
+
+            <EditText
+                android:id="@+id/et_login_nik"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:textColorHint="@color/black"
+                android:paddingLeft="4dp"
+                android:inputType="number"
+                android:textColor="#424242"
+                android:background="@drawable/bg_edittext"/>
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Lahir"
+                android:textStyle="bold"
+                android:textColor="#424242"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="yyyy-mm-dd"
+                    android:focusable="false"
+                    android:enabled="true"
+                    android:paddingRight="4dp"
+                    android:id="@+id/et_login_tgl_lahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:inputType="number"
+                    android:paddingLeft="4dp"
+                    android:textColor="#424242"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:drawableRight="@drawable/ic_date"/>
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_action_login"
+                android:background="@drawable/bg_button"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Masuk"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="-470dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login_bottom"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:text="Di Buat Oleh Instalasi SI RSIA ACEH"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:background="@drawable/bg_progress_bar"
+        android:padding="5dp"
+        android:indeterminateTint="@color/white"
+        android:indeterminate="true"
+        android:id="@+id/pb_login"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
