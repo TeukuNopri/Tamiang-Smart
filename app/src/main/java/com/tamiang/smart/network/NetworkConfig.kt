@@ -12,7 +12,7 @@ object NetworkConfig {
 
     private fun getRetrofitClient(): Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://regonrsia.acehprov.go.id/api/pasien/")
+            .baseUrl("https://88ced0486778.ngrok.io/api/pasien/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

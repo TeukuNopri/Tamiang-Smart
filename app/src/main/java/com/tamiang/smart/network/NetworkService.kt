@@ -8,15 +8,8 @@ import retrofit2.http.*
 interface NetworkService {
 
     // clear
-    @FormUrlEncoded
     @POST("cek_login")
-    fun cekLogin(
-        @Field("no_rkm_medik") no_rkm_medik: String?,
-        @Field("nik") nik: String?,
-        @Field("tgl_lahir") tgl_lahir: String?,
-        @Field("token") token: String?,
-        @Field("device") device: String?
-    ):Call<LoginResponse>
+    fun cekLogin(@Body req : LoginRequest):Call<LoginResponse>
 
     //clear
     @FormUrlEncoded
