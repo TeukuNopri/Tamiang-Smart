@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.milaparsia.rsia">
+    package="com.tamiang.smart">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -22,25 +22,25 @@
         android:theme="@style/Theme.Simrs"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".NetworkErrorActivity"
+            android:name="com.tamiang.smart.NetworkErrorActivity"
             android:exported="false" />
-        <activity android:name=".IntoSlideActivity" />
+        <activity android:name="com.tamiang.smart.IntoSlideActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsAmbulanceActivity"
+            android:name="com.tamiang.smart.MapsAmbulanceActivity"
             android:label="@string/title_activity_maps_ambulance" />
         <activity
-            android:name=".HomeActivity"
+            android:name="com.tamiang.smart.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.tamiang.smart.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.tamiang.smart.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -51,7 +51,7 @@
         </activity>
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name="com.tamiang.smart.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
